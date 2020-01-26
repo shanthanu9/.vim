@@ -57,6 +57,12 @@ endif
 " enable mouse support
 " set mouse=a
 
+" Below set of lines is for commenting
+" <leader> + / => comment line
+" Precedding by number 5 comments next 5 lines
+" Works with Visual mode also
+" Also uncomments commented lines!
+
 let s:comment_map = {
     \   "c": '\/\/',
     \   "cpp": '\/\/',
