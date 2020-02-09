@@ -54,6 +54,9 @@ if &diff
   map N :qa<CR>
 endif
 
+" Set 72 color column (Eg usage: for git commit messages)
+map <leader>L :set colorcolumn=72<CR>
+
 " enable mouse support
 " set mouse=a
 
