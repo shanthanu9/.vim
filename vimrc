@@ -91,6 +91,8 @@ let s:comment_map = {
     \   "ahk": ';',
     \   "vim": '"',
     \   "tex": '%',
+    \   "yacc": '\/\/',
+    \   "cuda": '\/\/'
     \ }
 
 function! ToggleComment()
@@ -117,3 +119,10 @@ endfunction
 nnoremap <leader>/ :call ToggleComment()<cr>
 vnoremap <leader>/ :call ToggleComment()<cr>
 
+" Custom configurations for markdown
+" color column and wrap text at 72 cols
+au BufRead,BufNewFile *.md setlocal textwidth=72
+au BufRead,BufNewFile *.md setlocal colorcolumn=72
+
+" Parenthesis and cracket handling
+inoremap { {<CR><BS>}<Esc>ko
